@@ -16,15 +16,15 @@ public class MoveSystem : IExecuteSystem
     {
         foreach(var entity in _group)
         {
-            /*var acceleration = entity.acceleration.value;
+            var acceleration = entity.acceleration.value;
             var newPosition = entity.position.value + (acceleration * Time.deltaTime);
-            entity.position.value = newPosition;*/
+            entity.ReplacePosition(newPosition);
 
-            var view = entity.view.value;
+            /*var view = entity.view.value;
             var acceleration = entity.acceleration.value;
             var position = view.transform.position;
             position += acceleration * Time.deltaTime;
-            view.transform.position = position;
+            view.transform.position = position;*/
         }
     }
 }

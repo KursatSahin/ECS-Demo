@@ -3,7 +3,7 @@ using Entitas.CodeGeneration.Attributes;
 using UnityEngine;
 
 [Game, Event(EventTarget.Self)]
-public class RotationComponent : IComponent// Euler rotation
+public sealed class RotationComponent : IComponent// Euler rotation
 {
     public Vector3 value;
 }
