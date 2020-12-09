@@ -35,7 +35,7 @@ public class InstantiateViewSystem : ReactiveSystem<GameEntity>
     GameObject InstantiateView(GameEntity entity)
     {
         var prefab = entity.prefab.value;
-        var go = Object.Instantiate(prefab);
+        var go = Object.Instantiate(prefab, _parent);
         var view  = go.GetComponent<IView>();
         view.Link(entity);
         return go;
