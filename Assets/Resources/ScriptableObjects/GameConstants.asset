@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db1dc010881438f8d38608751b315be, type: 3}
+  m_Name: GameConstants
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 8976557956660137974, guid: fc8de86659aee47f88c12903254ca3f1,
+    type: 3}
+  projectilePrefab: {fileID: 1492696783832449243, guid: da0efc18dfb134b2fa1307b8dc0bfa29,
+    type: 3}
+  doubleProjectilePrefab: {fileID: 1721632962548963646, guid: 9431e74a67cdf4951a67c5ca5add0a4b,
+    type: 3}
+  fireRate: 2
+  fireSpeed: 2
+  rotationSpeed: 90

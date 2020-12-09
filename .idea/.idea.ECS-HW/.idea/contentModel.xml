@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="DesperateDevs" t="Include">
+          <e p="Compile.cs" t="Include" />
+        </e>
+        <e p="Entitas" t="Include">
+          <e p="Entitas.xml" t="Include" />
+        </e>
+        <e p="Generated" t="Include">
+          <e p="Components" t="Include">
+            <e p="GameConstantsComponent.cs" t="Include" />
+          </e>
+          <e p="Contexts.cs" t="Include" />
+          <e p="Events" t="Include">
+            <e p="Components" t="Include">
+              <e p="AccelerationListenerComponent.cs" t="Include" />
+              <e p="DestroyedListenerComponent.cs" t="Include" />
+              <e p="PositionListenerComponent.cs" t="Include" />
+              <e p="RotationListenerComponent.cs" t="Include" />
+            </e>
+            <e p="GameEventSystems.cs" t="Include" />
+            <e p="Interfaces" t="Include">
+              <e p="IAccelerationListener.cs" t="Include" />
+              <e p="IDestroyedListener.cs" t="Include" />
+              <e p="IPositionListener.cs" t="Include" />
+              <e p="IRotationListener.cs" t="Include" />
+            </e>
+            <e p="Systems" t="Include">
+              <e p="AccelerationEventSystem.cs" t="Include" />
+              <e p="DestroyedEventSystem.cs" t="Include" />
+              <e p="PositionEventSystem.cs" t="Include" />
+              <e p="RotationEventSystem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Feature.cs" t="Include" />
+          <e p="Game" t="Include">
+            <e p="Components" t="Include">
+              <e p="GameAccelerationComponent.cs" t="Include" />
+              <e p="GameAccelerationListenerComponent.cs" t="Include" />
+              <e p="GameCloneComponent.cs" t="Include" />
+              <e p="GameClonePowerupComponent.cs" t="Include" />
+              <e p="GameCollisionComponent.cs" t="Include" />
+              <e p="GameDelayComponent.cs" t="Include" />
+              <e p="GameDelayedComponent.cs" t="Include" />
+              <e p="GameDestroyedComponent.cs" t="Include" />
+              <e p="GameDestroyedListenerComponent.cs" t="Include" />
+              <e p="GameDoubleFirePowerupComponent.cs" t="Include" />
+              <e p="GameDoubleFireShootingTriggerComponent.cs" t="Include" />
+              <e p="GameDoubleRatePowerupComponent.cs" t="Include" />
+              <e p="GameDoubleSpeedPowerupComponent.cs" t="Include" />
+              <e p="GameGameConstantsComponent.cs" t="Include" />
+              <e p="GamePauseComponent.cs" t="Include" />
+              <e p="GamePlayerComponent.cs" t="Include" />
+              <e p="GamePositionComponent.cs" t="Include" />
+              <e p="GamePositionListenerComponent.cs" t="Include" />
+              <e p="GamePrefabComponent.cs" t="Include" />
+              <e p="GameRotationComponent.cs" t="Include" />
+              <e p="GameRotationListenerComponent.cs" t="Include" />
+              <e p="GameShellComponent.cs" t="Include" />
+              <e p="GameShootingPreferencesComponent.cs" t="Include" />
+              <e p="GameShootingTriggerComponent.cs" t="Include" />
+              <e p="GameSideFirePowerupComponent.cs" t="Include" />
+              <e p="GameStartGameComponent.cs" t="Include" />
+              <e p="GameTimerComponent.cs" t="Include" />
+              <e p="GameViewComponent.cs" t="Include" />
+            </e>
+            <e p="GameAttribute.cs" t="Include" />
+            <e p="GameComponentsLookup.cs" t="Include" />
+            <e p="GameContext.cs" t="Include" />
+            <e p="GameEntity.cs" t="Include" />
+            <e p="GameMatcher.cs" t="Include" />
+          </e>
+          <e p="Input" t="Include">
+            <e p="Components" t="Include">
+              <e p="InputInputComponent.cs" t="Include" />
+            </e>
+            <e p="InputAttribute.cs" t="Include" />
+            <e p="InputComponentsLookup.cs" t="Include" />
+            <e p="InputContext.cs" t="Include" />
+            <e p="InputEntity.cs" t="Include" />
+            <e p="InputMatcher.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DemiLib" t="Include">
+              <e p="Core" t="Include">
+                <e p="DemiLib.xml" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="DemiEditor.xml" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+            <e p="DOTweenPro" t="Include">
+              <e p="DOTweenAnimation.cs" t="Include" />
+              <e p="DOTweenDeAudio.cs" t="Include" />
+              <e p="DOTweenDeUnityExtended.cs" t="Include" />
+              <e p="DOTweenProShortcuts.cs" t="Include" />
+              <e p="DOTweenTextMeshPro.cs" t="Include" />
+              <e p="DOTweenTk2d.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="DOTweenAnimationInspector.cs" t="Include" />
+                <e p="DOTweenPreviewManager.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+            <e p="readme_DOTweenPro.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="CollisionTriggerEntityBehaviour.cs" t="Include" />
+          <e p="Common" t="Include">
+            <e p="Components" t="Include">
+              <e p="CollisionComponent.cs" t="Include" />
+              <e p="DelayComponent.cs" t="Include" />
+              <e p="DelayedComponent.cs" t="Include" />
+              <e p="DestroyedComponent.cs" t="Include" />
+            </e>
+            <e p="EventManager.cs" t="Include" />
+            <e p="Events.cs" t="Include" />
+            <e p="IEventManagerHandling.cs" t="Include" />
+            <e p="ObjectPooler.cs" t="Include" />
+            <e p="PoolingObjectTags.cs" t="Include" />
+            <e p="Systems" t="Include">
+              <e p="CollisionDetectionSystem.cs" t="Include" />
+              <e p="DelayedSystem.cs" t="Include" />
+              <e p="DelaySystem.cs" t="Include" />
+              <e p="DestroySystem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Game" t="Include">
+            <e p="Components" t="Include">
+              <e p="StartGameComponent.cs" t="Include" />
+            </e>
+            <e p="GameConstants.cs" t="Include" />
+            <e p="GameController.cs" t="Include" />
+            <e p="GameSystems.cs" t="Include" />
+          </e>
+          <e p="Input" t="Include">
+            <e p="Components" t="Include">
+              <e p="InputComponent.cs" t="Include" />
+            </e>
+            <e p="Systems" t="Include">
+              <e p="InputSystem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Movement" t="Include">
+            <e p="Components" t="Include">
+              <e p="AccelerationComponent.cs" t="Include" />
+              <e p="PositionComponent.cs" t="Include" />
+              <e p="RotationComponent.cs" t="Include" />
+            </e>
+            <e p="Systems" t="Include">
+              <e p="AccelerationSystem.cs" t="Include" />
+              <e p="MoveProjectileSystem.cs" t="Include" />
+              <e p="MoveSystem.cs" t="Include" />
+              <e p="RotateTankSystem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Player" t="Include">
+            <e p="Components" t="Include">
+              <e p="CloneComponent.cs" t="Include" />
+              <e p="PlayerComponent.cs" t="Include" />
+            </e>
+            <e p="Systems" t="Include">
+              <e p="InitializeTankSystem.cs" t="Include" />
+            </e>
+            <e p="TankFields.cs" t="Include" />
+          </e>
+          <e p="Powerups" t="Include">
+            <e p="Components" t="Include">
+              <e p="ClonePowerupcomponent.cs" t="Include" />
+              <e p="DoubleFirePowerupComponent.cs" t="Include" />
+              <e p="DoubleRatePowerup.cs" t="Include" />
+              <e p="DoubleSpeedPowerupComponent.cs" t="Include" />
+              <e p="SideFirePowerupComponent.cs" t="Include" />
+            </e>
+            <e p="PowerUp.cs" t="Include" />
+            <e p="PowerUpToggle.cs" t="Include" />
+            <e p="Systems" t="Include">
+              <e p="ClonePowerupSystem.cs" t="Include" />
+              <e p="DoubleFirePowerupSystem.cs" t="Include" />
+              <e p="DoubleRatePowerupSystem.cs" t="Include" />
+              <e p="DoubleSpeedPowerupSystem.cs" t="Include" />
+              <e p="SideFirePowerupSystem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Shell" t="Include">
+            <e p="Components" t="Include">
+              <e p="ShellComponent.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Shooting" t="Include">
+            <e p="Components" t="Include">
+              <e p="DoubleFireShootingTriggerComponent.cs" t="Include" />
+              <e p="ShootingPreferencesComponent.cs" t="Include" />
+              <e p="ShootingTriggerComponent.cs" t="Include" />
+            </e>
+            <e p="Systems" t="Include">
+              <e p="DoubleFireShootingSystem.cs" t="Include" />
+              <e p="DoubleFireShootingTriggerSystem.cs" t="Include" />
+              <e p="ShootingSystem.cs" t="Include" />
+              <e p="ShootingTriggerSystem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Timer" t="Include">
+            <e p="Components" t="Include">
+              <e p="PauseComponent.cs" t="Include" />
+              <e p="TimerComponent.cs" t="Include" />
+            </e>
+            <e p="Systems" t="Include">
+              <e p="GlobalTimerUpdateSystem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="UI" t="Include">
+            <e p="InGameUiPanelManager.cs" t="Include" />
+            <e p="MainMenuManager.cs" t="Include" />
+            <e p="PowerUpPanelManager.cs" t="Include" />
+          </e>
+          <e p="View" t="Include">
+            <e p="Components" t="Include">
+              <e p="PrefabComponent.cs" t="Include" />
+              <e p="ViewComponent.cs" t="Include" />
+            </e>
+            <e p="IView.cs" t="Include" />
+            <e p="Systems" t="Include">
+              <e p="InstantiateViewSystem.cs" t="Include" />
+            </e>
+            <e p="View.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Third-Party Notices.txt" t="Include" />
+      </e>
+      <e p="ECS-HW.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_ECS-HW.1695997205.00" t="ExcludeRecursive" />
+  </component>
+</project>
