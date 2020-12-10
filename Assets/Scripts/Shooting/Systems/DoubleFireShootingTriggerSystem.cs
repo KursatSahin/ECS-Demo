@@ -14,28 +14,19 @@ public class DoubleFireShootingTriggerSystem : ReactiveSystem<GameEntity>
         
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return context.CreateCollector(GameMatcher.Timer.Added());
+        return context.CreateCollector(GameMatcher.ShootingTrigger.Added());
     }
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.hasTimer && entity.hasDoubleFireShootingTrigger && entity.hasShootingPreferences;
+        return entity.hasDoubleFirePowerup && entity.hasShootingPreferences;
     }
 
     protected override void Execute(List<GameEntity> entities)
     {
         foreach (var entity in entities)
         {
-            var modDivider =
-                entity.shootingPreferences.shootingRate +
-                (entity.shootingPreferences.shootingRate * entity.doubleFireShootingTrigger.value) +
-                doubleFireDelay;
-                ;
-            
-            if (entity.timer.currentTime % modDivider <= .1f)
-            {
-                entity.ReplaceDoubleFireShootingTrigger(entity.doubleFireShootingTrigger.value + 1);
-            }
+            entity.ReplaceDoubleFireShootingTrigger(Time.time + doubleFireDelay);
         }
     }
         

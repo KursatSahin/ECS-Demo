@@ -17,28 +17,20 @@ public class DoubleRatePowerupSystem : ReactiveSystem<GameEntity>
 
 	protected override bool Filter(GameEntity entity)
 	{
-		return true;
+		return entity.hasShootingPreferences;
 	}
 
 	protected override void Execute(List<GameEntity> entities)
 	{
 		foreach (var entity in entities)
 		{
-			if (!entity.hasShootingPreferences)
+			if (entity.hasDoubleRatePowerup)
 			{
-				Debug.Log("Missing Component!! Each player entity must have ShootingPreferencesComponent");
-				return;
+				entity.shootingPreferences.shootingRate = _contexts.game.gameConstants.value.fireRate * .5f;
 			}
 			else
 			{
-				if (entity.hasDoubleRatePowerup)
-				{
-					entity.shootingPreferences.shootingRate = _contexts.game.gameConstants.value.fireRate * .5f;
-				}
-				else
-				{
-					entity.shootingPreferences.shootingRate = _contexts.game.gameConstants.value.fireRate;
-				}
+				entity.shootingPreferences.shootingRate = _contexts.game.gameConstants.value.fireRate;
 			}
 		}
 	}

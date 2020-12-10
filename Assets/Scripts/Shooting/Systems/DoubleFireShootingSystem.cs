@@ -1,30 +1,30 @@
 using System.Collections.Generic;
 using Entitas;
+using UnityEngine;
 
-public class DoubleFireShootingSystem  : ReactiveSystem<GameEntity>
+public class DoubleFireShootingSystem : IExecuteSystem
 {
     private Contexts _contexts;
-    public DoubleFireShootingSystem(Contexts contexts) : base(contexts.game)
+    private IGroup<GameEntity> _group;
+    
+    public DoubleFireShootingSystem(Contexts contexts)
     {
         _contexts = contexts;
     }
 
-    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+    public void Execute()
     {
-        return context.CreateCollector(
-            GameMatcher.DoubleFireShootingTrigger.Added());
-    }
+        var entities = _contexts.game.GetEntities(GameMatcher.AllOf(
+            GameMatcher.DoubleFireShootingTrigger));
 
-    protected override bool Filter(GameEntity entity)
-    {
-        return entity.hasDoubleFireShootingTrigger;
-    }
-
-    protected override void Execute(List<GameEntity> entities)
-    {
-        foreach (var entity in entities)
+        for (int i = 0; i < entities.Length; i++)
         {
-            Shoot(entity);
+            var entity = entities[i];
+            if ( entity.doubleFireShootingTrigger.finishingTime <= Time.time )
+            {
+                Shoot(entity);
+                entity.RemoveDoubleFireShootingTrigger();    
+            }
         }
     }
 
@@ -44,5 +44,4 @@ public class DoubleFireShootingSystem  : ReactiveSystem<GameEntity>
         shellEntity.AddAcceleration(playerForward * shootingPreferences.shootingSpeed);
         shellEntity.AddPosition(playerTransform.GetComponent<TankFields>().m_FireTransform.position);
     }
-    
 }

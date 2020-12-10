@@ -11,17 +11,17 @@ public partial class GameEntity {
     public ShootingTriggerComponent shootingTrigger { get { return (ShootingTriggerComponent)GetComponent(GameComponentsLookup.ShootingTrigger); } }
     public bool hasShootingTrigger { get { return HasComponent(GameComponentsLookup.ShootingTrigger); } }
 
-    public void AddShootingTrigger(float newValue) {
+    public void AddShootingTrigger(float newFinishingTime) {
         var index = GameComponentsLookup.ShootingTrigger;
         var component = (ShootingTriggerComponent)CreateComponent(index, typeof(ShootingTriggerComponent));
-        component.value = newValue;
+        component.finishingTime = newFinishingTime;
         AddComponent(index, component);
     }
 
-    public void ReplaceShootingTrigger(float newValue) {
+    public void ReplaceShootingTrigger(float newFinishingTime) {
         var index = GameComponentsLookup.ShootingTrigger;
         var component = (ShootingTriggerComponent)CreateComponent(index, typeof(ShootingTriggerComponent));
-        component.value = newValue;
+        component.finishingTime = newFinishingTime;
         ReplaceComponent(index, component);
     }
 

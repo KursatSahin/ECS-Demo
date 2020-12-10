@@ -26,7 +26,7 @@ public sealed class DoubleFirePowerupSystem : ReactiveSystem<GameEntity>
         {
             if (entity.hasDoubleFirePowerup)
             {
-                entity.AddDoubleFireShootingTrigger(entity.shootingTrigger.value);
+                entity.AddDoubleFireShootingTrigger(float.PositiveInfinity);
             }
             else
             {

@@ -18,20 +18,14 @@ public class ShootingTriggerSystem : ReactiveSystem<GameEntity>
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.hasTimer && entity.hasShootingTrigger && entity.hasShootingPreferences;
+        return entity.hasTimer && entity.timer.currentTime > 0 && entity.hasShootingTrigger && entity.hasShootingPreferences;
     }
 
     protected override void Execute(List<GameEntity> entities)
     {
         foreach (var entity in entities)
-        {
-            var modDivider = entity.shootingPreferences.shootingRate +
-                             (entity.shootingPreferences.shootingRate * entity.shootingTrigger.value);
+        {   
             
-            if (entity.timer.currentTime % modDivider <= .1f)
-            {
-                entity.ReplaceShootingTrigger(entity.shootingTrigger.value + 1);
-            }
         }
     }
 }

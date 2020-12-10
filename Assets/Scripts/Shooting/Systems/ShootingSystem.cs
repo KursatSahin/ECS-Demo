@@ -1,31 +1,29 @@
 using System.Collections.Generic;
 using Entitas;
+using UnityEngine;
 
-public class ShootingSystem : ReactiveSystem<GameEntity>
+public class ShootingSystem : IExecuteSystem
 {
     private Contexts _contexts;
-    public ShootingSystem(Contexts contexts) : base(contexts.game)
+    private IGroup<GameEntity> _group;
+    
+    public ShootingSystem(Contexts contexts)
     {
         _contexts = contexts;
     }
 
-    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+    public void Execute()
     {
-        return context.CreateCollector(
-            GameMatcher.ShootingTrigger.Added(), 
-            GameMatcher.Delayed.Removed());
-    }
-
-    protected override bool Filter(GameEntity entity)
-    {
-        return entity.hasShootingTrigger;
-    }
-
-    protected override void Execute(List<GameEntity> entities)
-    {
-        foreach (var entity in entities)
+        _group = _contexts.game.GetGroup(GameMatcher.AllOf(
+            GameMatcher.ShootingTrigger));
+        
+        foreach (var entity in _group)
         {
-            Shoot(entity);
+            if ( entity.shootingTrigger.finishingTime <= Time.time )
+            {
+                Shoot(entity);
+                entity.ReplaceShootingTrigger(Time.time + entity.shootingPreferences.shootingRate);
+            }
         }
     }
 

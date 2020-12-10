@@ -17,19 +17,13 @@ public class DoubleSpeedPowerupSystem : ReactiveSystem<GameEntity>
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.isPlayer;
+        return entity.hasShootingPreferences;
     }
 
     protected override void Execute(List<GameEntity> entities)
     {
         var playerEntity = _contexts.game.GetGroup(GameMatcher.Player).GetSingleEntity();
-        
-        if (!playerEntity.hasShootingPreferences)
-        {
-            Debug.Log("Missing Component!! Each player entity must have ShootingPreferencesComponent");
-            return;
-        }
-        
+
         if (playerEntity.hasDoubleSpeedPowerup)
         {
             playerEntity.shootingPreferences.shootingSpeed = _contexts.game.gameConstants.value.fireSpeed * 2f;

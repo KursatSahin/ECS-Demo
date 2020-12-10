@@ -2,5 +2,5 @@ using Entitas;
 
 public class DoubleFireShootingTriggerComponent : IComponent
 {
-    public float value;
+    public float finishingTime;
 }

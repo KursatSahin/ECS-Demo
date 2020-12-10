@@ -11,17 +11,17 @@ public partial class GameEntity {
     public DoubleFireShootingTriggerComponent doubleFireShootingTrigger { get { return (DoubleFireShootingTriggerComponent)GetComponent(GameComponentsLookup.DoubleFireShootingTrigger); } }
     public bool hasDoubleFireShootingTrigger { get { return HasComponent(GameComponentsLookup.DoubleFireShootingTrigger); } }
 
-    public void AddDoubleFireShootingTrigger(float newValue) {
+    public void AddDoubleFireShootingTrigger(float newFinishingTime) {
         var index = GameComponentsLookup.DoubleFireShootingTrigger;
         var component = (DoubleFireShootingTriggerComponent)CreateComponent(index, typeof(DoubleFireShootingTriggerComponent));
-        component.value = newValue;
+        component.finishingTime = newFinishingTime;
         AddComponent(index, component);
     }
 
-    public void ReplaceDoubleFireShootingTrigger(float newValue) {
+    public void ReplaceDoubleFireShootingTrigger(float newFinishingTime) {
         var index = GameComponentsLookup.DoubleFireShootingTrigger;
         var component = (DoubleFireShootingTriggerComponent)CreateComponent(index, typeof(DoubleFireShootingTriggerComponent));
-        component.value = newValue;
+        component.finishingTime = newFinishingTime;
         ReplaceComponent(index, component);
     }
 
