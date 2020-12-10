@@ -30,7 +30,12 @@ public class View : MonoBehaviour, IView, IPositionListener, IRotationListener, 
 
     public virtual void OnDestroyed(GameEntity entity)
     {
+        var singleEntity = Contexts.sharedInstance.game.GetEntitiesWithView(gameObject).SingleEntity();
+        
         gameObject.Unlink();
+        
+        singleEntity.Destroy();
+
         Destroy(gameObject);
     }
 }

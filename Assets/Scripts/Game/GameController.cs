@@ -7,14 +7,15 @@ public class GameController : MonoBehaviour
 {
     public GameConstants gameConstants;
     private Systems _systems;
+    private Contexts _contexts;
 
     private void Start()
     {
-        var contexts = Contexts.sharedInstance;
+        _contexts = Contexts.sharedInstance;
         
-        contexts.game.SetGameConstants(gameConstants);
+        _contexts.game.ReplaceGameConstants(gameConstants);
 
-        _systems = new GameSystems(contexts);
+        _systems = new GameSystems(_contexts);
         //
         _systems.Initialize();
     }
@@ -32,9 +33,8 @@ public class GameController : MonoBehaviour
             this._systems.TearDown();
             this._systems.DeactivateReactiveSystems();
             this._systems.ClearReactiveSystems();
-            Contexts.sharedInstance.Reset();
-            // Contexts.sharedInstance.game.DestroyAllEntities();
-            // Contexts.sharedInstance.input.DestroyAllEntities();
+            
+            _contexts.Reset();
             
             this._systems = null;
         }

@@ -6,9 +6,9 @@ public class CollisionTriggerEntityBehaviour : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        var a = Contexts.sharedInstance.game.GetEntitiesWithView(other.gameObject);
+        var entities = Contexts.sharedInstance.game.GetEntitiesWithView(other.gameObject);
         
-        if (a.Count > 0 && a.SingleEntity().isShell)
+        if (entities.Count > 0 && entities.SingleEntity().isShell)
         {
             return;
         }

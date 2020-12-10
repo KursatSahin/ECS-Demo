@@ -13,31 +13,28 @@ public static class GameComponentsLookup {
     public const int Clone = 2;
     public const int ClonePowerup = 3;
     public const int Collision = 4;
-    public const int Delay = 5;
-    public const int Delayed = 6;
-    public const int Destroyed = 7;
-    public const int DestroyedListener = 8;
-    public const int DoubleFirePowerup = 9;
-    public const int DoubleFireShootingTrigger = 10;
-    public const int DoubleRatePowerup = 11;
-    public const int DoubleSpeedPowerup = 12;
-    public const int GameConstants = 13;
-    public const int Pause = 14;
-    public const int Player = 15;
-    public const int Position = 16;
-    public const int PositionListener = 17;
-    public const int Prefab = 18;
-    public const int Rotation = 19;
-    public const int RotationListener = 20;
-    public const int Shell = 21;
-    public const int ShootingPreferences = 22;
-    public const int ShootingTrigger = 23;
-    public const int SideFirePowerup = 24;
-    public const int StartGame = 25;
-    public const int Timer = 26;
-    public const int View = 27;
+    public const int Destroyed = 5;
+    public const int DestroyedListener = 6;
+    public const int DoubleFirePowerup = 7;
+    public const int DoubleFireShootingTrigger = 8;
+    public const int DoubleRatePowerup = 9;
+    public const int DoubleSpeedPowerup = 10;
+    public const int GameConstants = 11;
+    public const int Pause = 12;
+    public const int Player = 13;
+    public const int Position = 14;
+    public const int PositionListener = 15;
+    public const int Prefab = 16;
+    public const int Rotation = 17;
+    public const int RotationListener = 18;
+    public const int Shell = 19;
+    public const int ShootingPreferences = 20;
+    public const int ShootingTrigger = 21;
+    public const int SideFirePowerup = 22;
+    public const int Timer = 23;
+    public const int View = 24;
 
-    public const int TotalComponents = 28;
+    public const int TotalComponents = 25;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -45,8 +42,6 @@ public static class GameComponentsLookup {
         "Clone",
         "ClonePowerup",
         "Collision",
-        "Delay",
-        "Delayed",
         "Destroyed",
         "DestroyedListener",
         "DoubleFirePowerup",
@@ -65,7 +60,6 @@ public static class GameComponentsLookup {
         "ShootingPreferences",
         "ShootingTrigger",
         "SideFirePowerup",
-        "StartGame",
         "Timer",
         "View"
     };
@@ -76,8 +70,6 @@ public static class GameComponentsLookup {
         typeof(CloneComponent),
         typeof(ClonePowerupComponent),
         typeof(CollisionComponent),
-        typeof(DelayComponent),
-        typeof(DelayedComponent),
         typeof(DestroyedComponent),
         typeof(DestroyedListenerComponent),
         typeof(DoubleFirePowerupComponent),
@@ -96,7 +88,6 @@ public static class GameComponentsLookup {
         typeof(ShootingPreferencesComponent),
         typeof(ShootingTriggerComponent),
         typeof(SideFirePowerupComponent),
-        typeof(StartGameComponent),
         typeof(TimerComponent),
         typeof(ViewComponent)
     };
