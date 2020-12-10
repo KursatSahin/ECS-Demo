@@ -19,7 +19,7 @@ public sealed class GameSystems : Feature
         Add(new ClonePowerupSystem(contexts));
         Add(new SideFirePowerupSystem(contexts));
         Add(new AccelerationSystem(contexts));
-        Add(new MoveProjectileSystem(contexts));
+        //Add(new MoveProjectileSystem(contexts));
         Add(new MoveSystem(contexts));
         Add(new ShootingSystem(contexts));
         Add(new ShootingTriggerSystem(contexts));
