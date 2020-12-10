@@ -14,17 +14,17 @@ public class InputSystem : IExecuteSystem
     {
         Vector3 rotateVal = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
         {
             rotateVal = Vector3.zero;
             // Debug.Log("LeftRight");
         } 
-        else if (Input.GetKey(KeyCode.LeftArrow)) 
+        else if (Input.GetKey(KeyCode.A)) 
         {
             rotateVal = Vector3.forward;
             // Debug.Log("Left");
         } 
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.D))
         {
             rotateVal = Vector3.back;
             // Debug.Log("Right");
