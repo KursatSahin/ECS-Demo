@@ -18,7 +18,7 @@ public class SideFirePowerupSystem : ReactiveSystem<GameEntity>
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.hasShootingTrigger && entity.isPlayer && entity.hasSideFirePowerup;
+        return entity.hasShootingTrigger && entity.hasSideFirePowerup;
     }
 
     protected override void Execute(List<GameEntity> entities)

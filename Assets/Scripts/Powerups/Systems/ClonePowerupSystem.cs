@@ -31,16 +31,24 @@ namespace Powerups.Systems
                 var cloneEntity = _contexts.game.CreateEntity();
                 cloneEntity.isClone = true;
                 cloneEntity.AddPosition(new Vector3(2,0,0));
-                
+
                 var componentIndices = entity.GetComponentIndices();
                 
                 foreach (var index in componentIndices)
                 {
                     var component = entity.GetComponent(index);
                     
-                    if (component is ClonePowerupComponent || component is PlayerComponent || component is PositionComponent || component is InputComponent)
+                    if (component is ClonePowerupComponent ||
+                        component is PlayerComponent || 
+                        component is PositionComponent || 
+                        component is PositionListenerComponent || 
+                        //component is RotationComponent || 
+                        component is RotationListenerComponent || 
+                        component is InputComponent ||
+                        component is ViewComponent || 
+                        component is DestroyedListenerComponent)
                         continue;
-
+                    
                     cloneEntity.ReplaceComponent(index, component);
                 }
             }

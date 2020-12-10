@@ -191,6 +191,7 @@
               <e p="DoubleFirePowerupComponent.cs" t="Include" />
               <e p="DoubleRatePowerup.cs" t="Include" />
               <e p="DoubleSpeedPowerupComponent.cs" t="Include" />
+              <e p="IPowerup.cs" t="Include" />
               <e p="SideFirePowerupComponent.cs" t="Include" />
             </e>
             <e p="PowerUp.cs" t="Include" />

@@ -9,6 +9,7 @@ public class View : MonoBehaviour, IView, IPositionListener, IRotationListener, 
         gameObject.Link(entity);
         var e = (GameEntity)entity;
         e.AddPositionListener(this);
+        e.AddRotationListener(this);
         e.AddDestroyedListener(this);
 
         var pos = e.position.value;
@@ -18,12 +19,13 @@ public class View : MonoBehaviour, IView, IPositionListener, IRotationListener, 
     public virtual void OnPosition(GameEntity entity, Vector3 value)
     {
         transform.localPosition = value;
-        Debug.Log("burada debug var...");
     }
 
     public virtual void OnRotation(GameEntity entity, Vector3 value)
     {
+        //transform.Rotate(value);
         transform.localRotation = Quaternion.Euler(value);
+        Debug.Log(nameof(OnRotation) + " is called");
     }
 
     public virtual void OnDestroyed(GameEntity entity)
